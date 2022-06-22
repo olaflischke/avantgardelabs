@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDal", "NorthwindDal\NorthwindDal.csproj", "{80BB5A7A-AA39-4C03-9CD1-B4F104EFB2BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDalTests", "NorthwindDalTests\NorthwindDalTests.csproj", "{424C1F12-B7D5-4000-A014-2E8F35B5C7D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80BB5A7A-AA39-4C03-9CD1-B4F104EFB2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BB5A7A-AA39-4C03-9CD1-B4F104EFB2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BB5A7A-AA39-4C03-9CD1-B4F104EFB2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BB5A7A-AA39-4C03-9CD1-B4F104EFB2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{424C1F12-B7D5-4000-A014-2E8F35B5C7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{424C1F12-B7D5-4000-A014-2E8F35B5C7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{424C1F12-B7D5-4000-A014-2E8F35B5C7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{424C1F12-B7D5-4000-A014-2E8F35B5C7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

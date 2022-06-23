@@ -43,6 +43,9 @@ namespace NorthwindDal.Model
             {
                 entity.ToTable("customers");
 
+                // Concurrency Control für Customer aktivieren
+                entity.UseXminAsConcurrencyToken();
+                
                 entity.Property(e => e.CustomerId)
                     .HasColumnType("string")
                     .ValueGeneratedNever()

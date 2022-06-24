@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NorthwindDal.Model
 {
@@ -21,6 +22,8 @@ namespace NorthwindDal.Model
         public string? Country { get; set; }
         public string? Phone { get; set; }
         public string? Fax { get; set; }
+        
+        [NotMapped]
         public string? Email { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }

@@ -38,22 +38,7 @@ namespace ChinookDal.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Album>(entity =>
-            {
-                entity.ToTable("Album");
-
-                entity.HasIndex(e => e.ArtistId, "IFK_AlbumArtistId");
-
-                entity.Property(e => e.AlbumId).ValueGeneratedNever();
-
-                entity.Property(e => e.Title).HasMaxLength(160);
-
-                entity.HasOne(d => d.Artist)
-                    .WithMany(p => p.Albums)
-                    .HasForeignKey(d => d.ArtistId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_AlbumArtistId");
-            });
+            modelBuilder.ApplyConfiguration(new AlbumConfiguration());
 
             modelBuilder.Entity<Artist>(entity =>
             {

@@ -27,5 +27,6 @@ namespace NorthwindDal.Model
 
         public virtual Customer? Customer { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

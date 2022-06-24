@@ -5,24 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be50fcb3-d1d8-4a00-9d86-b8c8a311cfab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WorkPlanScaffolded/.idea/efCoreCommonOptions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WorkPlanScaffolded/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WorkPlanScaffolded/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WorkPlanScaffolded/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WorkPlanScaffolded/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Workplan/.idea/.idea.Workplan/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Workplan/.idea/.idea.Workplan/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Workplan/.idea/.idea.Workplan/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Workplan/WorkplanDal/RecordClass.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Workplan/WorkplanDal/Task.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Workplan/WorkplanDal/WorkPlanContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chinook/ChinookDal/Entities/AlbumConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/Employee.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/EmployeesJson.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Doku/Flipcharts/Flipcharts.one" beforeDir="false" afterPath="$PROJECT_DIR$/../../Doku/Flipcharts/Flipcharts.one" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chinook/ChinookDal/Entities/Album.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Chinook/ChinookDal/Entities/Album.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Chinook/ChinookDal/Entities/ChinookContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Chinook/ChinookDal/Entities/ChinookContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Chinook/ChinookDalTests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Chinook/ChinookDalTests/UnitTest1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Northwind/.idea/.idea.Northwind/.idea/efCoreCommonOptions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Northwind/.idea/.idea.Northwind/.idea/efCoreCommonOptions.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/Customer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/NorthwindContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/NorthwindContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Northwind/NorthwindDal/Model/Order.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Northwind/NorthwindDalTests/NorthwindContextTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Northwind/NorthwindDalTests/NorthwindContextTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TradingDay/TradingDayDalTests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TradingDay/TradingDayDalTests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WorkPlanScaffolded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WorkPlanScaffolded/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Workplan/WorkplanDal/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Workplan/WorkplanDal/Person.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656065944747</updated>
-      <workItem from="1656065977053" duration="930000" />
+      <workItem from="1656065977053" duration="2120000" />
     </task>
     <servers />
   </component>

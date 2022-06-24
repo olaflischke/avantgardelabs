@@ -1,3 +1,5 @@
+using System.Text.Json;
+using System.Transactions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using NorthwindDal.Model;
@@ -234,4 +236,75 @@ public class Tests
         
         Console.WriteLine($"ABC Shop: {context.Entry(abc).State}");
     }
+
+    [Test]
+    public void TransactionInEfCore()
+    {
+        Customer alfki = null!;
+        
+        using (TransactionScope tra = new TransactionScope(TransactionScopeOption.Required))
+        {
+             alfki = context.Customers.Find("ALFKI");
+            alfki.ContactName = "Timmy";
+
+            context.SaveChanges();
+
+
+            Order order = new Order() { Customer = alfki, OrderId = 22222};
+            context.Orders.Add(order);
+
+            context.SaveChanges();
+
+            // Ohne Complete() findet beim Disposing des TrasnactionScopes automatisch ein Rollback statt!
+            //tra.Complete();
+        }
+        
+        // Bei nicht vollständiger Transaktion enthält Modell fehlerhafte (nicht synchronisierte) Daten
+        Console.WriteLine($"{alfki.ContactName}: {context.Entry(alfki).State}");
+        
+        // Reload hilfreich.
+        context.Entry(alfki).Reload();
+    }
+    
+    [Test]
+    public void CanReadJsonData()
+    {
+
+        EmployeesJson nancy = context.Employeesjsons
+            .FirstOrDefault(
+            emp => EF.Functions.JsonContains(emp.Data, "{\"FirstName\":\"Nancy\"}")
+            );
+        
+        EmployeesJson andrew = context.Employeesjsons
+            .FromSqlRaw("select * from employeesjson where data ->> 'FirstName' = 'Andrew' ")
+            .FirstOrDefault();
+
+        Console.WriteLine($"Found: {nancy.Data}");
+        Console.WriteLine($"Found: {andrew.Data}");
+
+        Assert.Pass();
+    }
+
+    [Test]
+    public void IsJsonFilling()
+    {
+
+        if (context.Employeesjsons.Count() > 0)
+        {
+            throw new Exception("EmployeesJson enthält bereits Daten.");
+        }
+
+        IEnumerable<Employee> employees = context.Employees;
+
+        foreach (Employee employee in employees)
+        {
+            EmployeesJson jsonEmp = new() { EmployeeId = employee.EmployeeId, Data = JsonSerializer.Serialize(employee) };
+            context.Employeesjsons.Add(jsonEmp);
+        }
+
+        context.SaveChanges();
+
+        Assert.Pass();
+    }
+
 }

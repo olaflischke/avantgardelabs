@@ -103,6 +103,22 @@ public class Tests
         //artist.Albums.Add(album);
     }
 
+    [Test]
+    public void GetArtistsRanked()
+    {
+        ChinookContext context = new(options);
+
+        var qArtists = context.Artists.AsNoTracking().AsEnumerable()
+            .Select((at, i) => new { Artist = at, Index = i })
+            .Where(el => el.Artist.Name.ToLower().StartsWith("a"))
+            .ToList();
+
+        foreach (var element in qArtists)
+        {
+            Console.WriteLine($"{element.Index}, {element.Artist.Name}");
+        }
+    }
+
     private void LogIt(string logString)
     {
         Console.WriteLine(logString);

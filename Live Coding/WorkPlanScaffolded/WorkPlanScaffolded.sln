@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkPlanDal", "WorkPlanDal\WorkPlanDal.csproj", "{BB2BB80D-CBA5-4405-9218-9DFDC86F969C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB2BB80D-CBA5-4405-9218-9DFDC86F969C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2BB80D-CBA5-4405-9218-9DFDC86F969C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2BB80D-CBA5-4405-9218-9DFDC86F969C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2BB80D-CBA5-4405-9218-9DFDC86F969C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

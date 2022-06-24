@@ -26,15 +26,15 @@ namespace ChinookDal.Entities
         public virtual DbSet<Genre> Genres { get; set; } = null!;
         public virtual DbSet<Track> Tracks { get; set; } = null!;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseNpgsql("server=localhost;port=5432;database=chinook;user id=demo;password=Geheim123");
-                optionsBuilder.LogTo(log => this.Log?.Invoke(log));//, LogLevel.Information);
-            }
-        }
+//         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//         {
+//             if (!optionsBuilder.IsConfigured)
+//             {
+// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//                 optionsBuilder.UseNpgsql("server=localhost;port=5432;database=chinook;user id=demo;password=Geheim123");
+//                 optionsBuilder.LogTo(log => this.Log?.Invoke(log));//, LogLevel.Information);
+//             }
+//         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

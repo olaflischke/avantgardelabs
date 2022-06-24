@@ -21,7 +21,7 @@ namespace NorthwindDal.Model
         public string? Country { get; set; }
         public string? Phone { get; set; }
         public string? Fax { get; set; }
-
+        public string? Email { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

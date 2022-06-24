@@ -13,6 +13,7 @@ public class Tests
     {
         context = new NorthwindContext();
         context.Log = LogIt;
+        
     }
 
     private void LogIt(string logString)
@@ -192,6 +193,8 @@ public class Tests
         Order lastOrder = alfki.Orders.Last();
 
         lastOrder.ShippedDate = new DateOnly(2006, 06, 23);
+        // context.Entry(lastOrder).CurrentValues;
+        // context.Entry(lastOrder).OriginalValues;
 
         //context.SaveChanges();
         Console.WriteLine($"ALFKI: {context.Entry(alfki).State}");
@@ -206,7 +209,7 @@ public class Tests
 
         Console.WriteLine($"ALFKI: {context.Entry(alfki).State}");
         Console.WriteLine($"LastOrder: {context.Entry(lastOrder).State}");
-        
+
         foreach (Order order in alfki.Orders)
         {
             Console.WriteLine($"Order: {order.OrderId} - {context.Entry(order).State}");
@@ -214,5 +217,21 @@ public class Tests
 
         Console.WriteLine("Saving...");
         context.SaveChanges();
+    }
+
+    [Test]
+    public void AddCustomer()
+    {
+        Customer abc = new Customer() { CustomerId = "ABCDE", CompanyName = "ABC Shop", ContactName = "Tim Schmitt" };
+
+        Console.WriteLine($"ABC Shop: {context.Entry(abc)?.State ?? 0}");
+
+        context.Customers.Add(abc);
+
+        Console.WriteLine($"ABC Shop: {context.Entry(abc).State}");
+
+        context.SaveChanges();
+        
+        Console.WriteLine($"ABC Shop: {context.Entry(abc).State}");
     }
 }

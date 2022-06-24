@@ -47,7 +47,7 @@ namespace NorthwindDal.Model
                 entity.UseXminAsConcurrencyToken();
                 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("string")
+                    .HasMaxLength(5)
                     .ValueGeneratedNever()
                     .HasColumnName("customer_id");
 
